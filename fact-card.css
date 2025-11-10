@@ -1,0 +1,30 @@
+/* For Card Container */
+#card-container {
+    margin: auto;
+    width: 555px;
+    height: 444px;
+    background-color: gray;
+    padding: 30px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #D3D3D3;
+}
+
+/* Designed for Fact Button */
+#fact-button {
+    background-color: #007BFF;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#fact-button:hover {
+   background-color: #0056B3;
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
