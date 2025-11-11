@@ -1,7 +1,7 @@
 // Level 1: Easy Challenges (Basics & Confidence Boosters)
 // i) Even or Odd Checker
 const number = (number) => {
-    number % 2 === 0 ? true : false;
+    return number % 2 === 0 ? true : false;
 }
 number(4);
 // In above i am also used ternery operator.
@@ -10,7 +10,7 @@ number(4);
 function greet(name) {
     console.log("Hello, ",name);
 }
-greet(rockey);
+greet("rockey");
 
 // iii) - Favorite Colors
 const colors = ["red", "green", "blue"];
@@ -85,7 +85,7 @@ devFacts(webDevFacts);
 
 // iii) User Profile Object
 const user = {name:"rockey", age: 16, isStudent: true};
-console.log(`My name ${user.name} with an ${user.age} number of age.True is i am student or false if i am not a student answer is ${user.isStudent} .`);
+console.log(`My name ${user.name}. My age is ${user.age} . && True is i am student or false if i am not a student answer is ${user.isStudent} .`);
 
 // iv) Loop Countdown
 const countDown = () => {
@@ -123,4 +123,54 @@ function multipleOf () {
         }
     }
 }
-// multiple();
+multipleOf();
+
+// ii) Array Filter :-
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const areEven = numbers.filter( (n) => n % 2 == 0);
+console.log("Even numbers:", areEven);
+
+// iii) Dynamic Greeting :-
+function greetingFunc (userData) {
+    const userName = userData.name;
+    const userTime = userData.time;
+    console.log(`"Good ${userTime}, ${userName}!"`);
+}
+greetingFunc({name: "Rockey", time: "morning"});
+
+// iv) Mini Quiz App :-
+const quiz = [
+  {
+    question: "What does HTML stand for?",
+    options: [
+      "Hyper Text Markup Language",
+      "Home Tool Markup Language",
+      "Hyperlinks and Text Markup Language",
+      "Hyper Tool Multi Language"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which tag is used for inserting a line break?",
+    options: ["<br>", "<lb>", "<break>", "<line>"],
+    answer: 0
+  },
+  {
+    question: "Which company developed JavaScript?",
+    options: ["Microsoft", "Netscape", "Google", "Apple"],
+    answer: 1
+  }
+];
+
+const runQuiz = (quizArray) => {
+  quizArray.forEach((q, index) => {
+    console.log(`\nQuestion ${index + 1}: ${q.question}`);
+    q.options.forEach((opt, i) => {
+      console.log(`${i + 1}. ${opt}`);
+    });
+    console.log(`Correct Answer: ${q.options[q.answer]}`);
+  });
+};
+
+runQuiz(quiz);
+// All the above question is challenge by Co-pilot.
