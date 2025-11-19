@@ -62,3 +62,17 @@ fetch("https://catfact.ninja/fact")
 .catch((error) => {
     console.log("Got an error as :", error);
 })
+
+const resultElement = document.getElementById('api-result');
+
+const fetchFact = async () => {
+    try {
+        const response = await fetch('https://dummyjson.com/posts/1');
+        const data = await response.json();
+        resultElement.textContent = `API Fact: "${data.body}"`;
+    } catch (error) {
+        console.log("An error occured during fetch", error);
+    }
+
+};
+fetchFact();
