@@ -174,3 +174,46 @@ const runQuiz = (quizArray) => {
 
 runQuiz(quiz);
 // All the above question is challenge by Co-pilot.
+
+// Day 12 challenge done in factCard.js i.e public api implementation 
+// Day 13 challenge is written below :-
+
+// i) Defining array of objects as given below.
+const products = [
+    {name: "T-shirt", price: 25, available: true},
+    {name: "Coffee Mug", price: 12, available: true},
+    {name: "Book", price: 40, available: false},
+    {name: "Sticker Pack", price: 5, available: true}
+];
+
+// ii) Filter Challenge.
+const availableProducts = products.filter((product) => {
+    return product.available === true;
+});
+console.log(availableProducts);
+
+// iii) Map Challenge.
+const productNames = products.map((product) => {
+    return product.name;
+});
+console.log(productNames);
+
+// iv) Reduce Challenge :-
+const totalValue = availableProducts.reduce((accumulator, product) => {
+    return accumulator + product.price;
+});
+console.log(totalValue);
+
+// Day 14 Challenge :- Above products array is used
+
+// i) Object Destructuring.
+const {pName, price} = products[0];
+console.log(pName, price);
+
+// ii) Array Destructuring.
+const [firstItem, ,thirdItem] = products;
+console.log(firstItem, thirdItem);
+
+// iii) Spread Operator.
+const updatedMug = {...products[1], price: 15, sale: true};
+comsole.log(updatedMug);
